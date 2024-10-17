@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 5rem;
+}
+
+.navbar--logo {
+    margin-left: 2rem;
+    width: 2rem;
+    height: 2.5rem;
+}
+
+.navbar--items {
+    margin: auto;
+    display: flex;
+    width: 50vw;
+    
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar--item {
+    font-family: 'Gudea', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.navbar--item::after {
+    display: block;
+    content: "";
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    height: 0.1rem;
+    background-color: var(--black);
+    transition-duration: 300ms;
+    transition-delay: 60ms;
+}
+
+.navbar--item:hover::after {
+    width: 100%;
+}
+
+.navbar--account {
+    margin-right: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
