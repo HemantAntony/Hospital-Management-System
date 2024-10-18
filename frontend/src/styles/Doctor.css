@@ -1,0 +1,29 @@
+.doctor {
+    width: 15rem;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.doctor--image {
+    max-width: 100%;
+}
+
+.doctor--name {
+    margin: 0;
+    color: var(--white);
+    position:absolute;
+    bottom: 2.5rem;
+}
+
+.doctor--dept {
+    margin: 0;
+    color: var(--white);
+    position: absolute;
+    bottom: 0.75rem;
+}

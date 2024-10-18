@@ -1,0 +1,7 @@
+.doctors--grid {
+    padding: 1rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15rem);
+    gap: 3rem;
+}
