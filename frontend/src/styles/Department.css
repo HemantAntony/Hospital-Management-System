@@ -5,10 +5,10 @@
     align-items: center;
     width: 15rem;
     height: 15rem;
-
     border-style: solid;
     border-width: 2px;
     border-color: var(--black);
+    cursor: pointer;
 }
 
 .department--image {

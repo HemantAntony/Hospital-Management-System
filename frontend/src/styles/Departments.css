@@ -1,4 +1,8 @@
 .departments {
+    height: 100%;
+}
+
+.departments--grid {
     padding: 1rem;
     justify-content: center;
     display: grid;
