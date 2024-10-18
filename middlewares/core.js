@@ -10,7 +10,16 @@ router.get('/departments', async (req, res) => {
         console.log(error.message)
         return;
     }
-    console.log(data)
+    res.json(data)
+})
+
+router.get('/doctors', async (req, res) => {
+    const supabase = getSupabase()
+    const {data, error} = await supabase.from("Doctor").select('name, dept, summary')
+    if (error) {
+        console.log(error.message)
+        return;
+    }
     res.json(data)
 })
 

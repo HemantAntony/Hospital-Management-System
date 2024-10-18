@@ -17,7 +17,6 @@ export default function Departments() {
 
     let departments
     if (departmentsRaw) {
-        console.log(departmentsRaw)
         departments = departmentsRaw.map(department => {
             return <Department key={department.name} name={department.name} onClick={()=>{
                 setCurrentDepartment(department)
