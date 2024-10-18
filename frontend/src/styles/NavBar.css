@@ -47,6 +47,11 @@
     width: 100%;
 }
 
+.navbar--item > * {
+    color: var(--black);
+    text-decoration: none;
+}
+
 .navbar--account {
     margin-right: 2rem;
     width: 2rem;
