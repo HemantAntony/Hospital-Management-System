@@ -14,3 +14,7 @@
 .department--image {
     height: 3rem;
 }
+
+.department--name {
+    font-size: 1.5rem;
+}

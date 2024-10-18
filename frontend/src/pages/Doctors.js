@@ -42,6 +42,7 @@ export default function Doctors() {
     const doctors = doctorsRaw.map(doctor => <Doctor name={doctor.name} dept={doctor.dept} onClick={()=>setCurrentDoctor(doctor)}/>)    
 
     let [currentDoctor, setCurrentDoctor] = useState(null)
+    console.log(currentDoctor)
     
     return (
         <div className="doctors">

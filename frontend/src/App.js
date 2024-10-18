@@ -1,4 +1,5 @@
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
+import axios from "axios"
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from "./pages/Home"
