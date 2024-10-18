@@ -1,9 +1,9 @@
-import NavBar from '../components/NavBar';
+import AccountNeeded from "../components/AccountNeeded";
 
 export default function Home() {
     return (
         <div>
-            <h1>Appointments page</h1>
+            <AccountNeeded />
         </div>
     )
 }
