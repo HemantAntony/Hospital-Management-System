@@ -63,6 +63,28 @@ function authenticateToken(req, res, next) {
         
         res.user = user
     })
+
+    next()
 }
+
+router.post('/appointment', authenticateToken, async (req, res) => {
+    const appointmentData= req.body
+    const supabase = getSupabase()
+
+    try {
+        const doctorId = (await supabase.from("Doctor").select("id").eq("name", appointmentData.doctor)).data[0].id
+        const patientId = (await supabase.from("Patient").select("id").eq("username", res.user.name)).data[0].id
+        await supabase.from("Appointment").insert({
+            "patient": patientId,
+            "time": appointmentData.time,
+            "summary": appointmentData.summary,
+            "doctor": doctorId
+        })
+    } catch (error) {
+        console.log(error)
+    }
+    
+    res.sendStatus(200)
+})
 
 module.exports = router
