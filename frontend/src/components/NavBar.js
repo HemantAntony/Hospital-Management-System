@@ -11,7 +11,9 @@ export default function NavBar() {
                 <li className="navbar--item"><Link to="/doctors">Doctors</Link></li>
                 <li className="navbar--item"><Link to="/appointments">Appointments</Link></li>
             </ul>
+            <Link to="/account">
             <img src="account.png" alt="Account" className="navbar--account"></img>
+            </Link>
         </div>
     )
 }

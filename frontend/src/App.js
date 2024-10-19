@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Departments from "./pages/Departments"
 import Doctors from "./pages/Doctors"
 import Appointments from "./pages/Appointments"
+import Account from "./pages/Account"
 
 function NavBarWrapper() {
   return (
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/appointments',
         element: <Appointments />
+      },
+      {
+        path: '/account',
+        element: <Account />
       },
     ]
   },

@@ -7,6 +7,8 @@ const {initiateDB} = require('./initiate_db')
 
 app.use(cors())
 
+app.use(express.json())
+
 app.use('/', core)
 
 initiateDB();
