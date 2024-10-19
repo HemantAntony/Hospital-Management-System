@@ -40,8 +40,9 @@ export default function Account() {
         console.log(login)
         const func = async () => {
             const data = await axios.post('http://localhost:5000/account/login', login)
-            localStorage.setItem('jwt', data.data)
             console.log(data.data)
+            sessionStorage.setItem('jwt', data.data.accessToken)
+            sessionStorage.setItem('doctor', data.data.doctor)
         }
         func()
     }
@@ -51,7 +52,7 @@ export default function Account() {
         console.log(signup)
         const func = async () => {
             const data = await axios.post('http://localhost:5000/account/signup', signup)
-            localStorage.setItem('jwt', data.data)
+            sessionStorage.setItem('jwt', data.data)
             console.log(data.data)
         }
         func()

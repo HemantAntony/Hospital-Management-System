@@ -38,7 +38,7 @@ router.post('/account/login', async (req, res) => {
         return res.sendStatus(401)
     }
     const accessToken = jwt.sign({name: login.username}, process.env.ACCESS_TOKEN_SECRET)
-    res.json({accessToken})
+    res.json({accessToken, doctor: (login.username === "doctor")})
 })
 
 router.post('/account/signup', async (req, res) => {

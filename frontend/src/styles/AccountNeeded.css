@@ -1,0 +1,11 @@
+.account--needed {
+    display: flex;
+    margin: auto;
+    margin-top: auto;
+    height: 100%;
+    width: fit-content;
+}
+.account--needed--text {
+    font-weight: 400;
+    text-transform: uppercase;
+}
